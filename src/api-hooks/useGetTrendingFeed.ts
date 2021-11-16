@@ -4,7 +4,11 @@ import singlePost from "../mocks/post.json";
 import { transformPost } from "../utils";
 import { Post } from "../models";
 
-const mockResponse = () => Array.from(new Array(30)).map(() => transformPost(singlePost));
+const mockResponse = () => Array.from(new Array(30)).map(() => {
+  const post = transformPost(singlePost);
+  post.id = `${Math.random() + Math.random()}`; 
+  return post
+});
 
 export const useGetTrendingFeed = (limit: number = 30) => {
   const key = `get_trending_feed_${limit}`;
