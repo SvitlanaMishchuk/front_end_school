@@ -1,8 +1,13 @@
 export interface Author {
-    id: string;
-    name: string;
-    nickName: string;
-    avatar: string;
+  id: string;
+  name: string;
+  nickName: string;
+  avatar: string;
+}
+
+export interface Hashtag {
+  id: string;
+  name: string;
 }
 
 export interface Post {
@@ -10,7 +15,7 @@ export interface Post {
   author: Author;
   text: string;
   videoUrl: string;
-  hashtags: Array<string>;
+  hashtags: Hashtag[];
   likesCount: number;
   commentsCount: number;
 }

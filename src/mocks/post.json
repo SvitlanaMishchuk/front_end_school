@@ -35,7 +35,7 @@
     "dynamic": "https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/6d5b110eb075424bba9cf241b0c418a6_1631373231?x-expires=1637013600&x-signature=tsFSZQNz9g48hRcem0x0BYR%2FT%2FY%3D"
   },
   "webVideoUrl": "https://www.tiktok.com/@kikakiim/video/7006694664724122881",
-  "videoUrl": "https://v16m.tiktokcdn.com/41d5bb04b6e9f6ea3059330bd5098210/6192df70/video/tos/alisg/tos-alisg-pve-0037c001/449c8bd66c7941a5ba06ef064081e855/?a=1233&br=3502&bt=1751&cd=0%7C0%7C1&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=wZ~R_F5qkag3-I&l=20211115162959010189071015442102B5&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=amttNjU6ZjtmNzMzODczNEApNDhoOTozNWU2NzdkM2Y0ZGdtcTBxcjRvY3JgLS1kMS1zcy5iNDJfMTU2NDMyXjYvNTI6Yw%3D%3D&vl=&vr=",
+  "videoUrl": "https://v58.tiktokcdn.com/video/tos/useast2a/tos-useast2a-pve-0037-aiso/969b707e57984024958dda92ae7d6201/?VExpiration=1637096228&VSignature=vOSKcxCvq8kUYG5qbmWjkA&a=1180&br=3248&bt=1624&cd=0%7C0%7C1&ch=0&cr=0&cs=0&cv=1&dr=3&ds=3&er=&ft=wECRNFGnkag3-I&l=2021111614564001019106414014179F99&lr=tiktok&mime_type=video_mp4&net=0&pl=0&qs=0&rc=ankzdmQ6ZnFrOTMzZjgzM0ApNDs3OjtkPDw2NzxlaTQ4N2dfc2ovcjRvYDNgLS1kL2Nzcy40My5hYTUtXjNjMDMvYjA6Yw%3D%3D&vl=&vr=",
   "videoUrlNoWaterMark": "",
   "videoApiUrlNoWaterMark": "",
   "videoMeta": {
@@ -49,7 +49,20 @@
   "commentCount": 20100,
   "downloaded": false,
   "mentions": [],
-  "hashtags": [],
+  "hashtags": [
+    {
+      "id": "1666867608081413",
+      "name": "ouhmanalta",
+      "title": "",
+      "cover": ""
+    },
+    {
+      "id": "123",
+      "name": "test 2",
+      "title": "",
+      "cover": ""
+    }
+  ],
   "effectStickers": [
     {
       "id": "459476",

@@ -1,1 +1,1 @@
-export * from './transformPost';
+export * from "./transformPost";
