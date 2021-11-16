@@ -13,9 +13,9 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <Container maxWidth="md">
-      <QueryClientProvider client={queryClient}r>
-        <Header />
+      <QueryClientProvider client={queryClient}>
         <Router>
+          <Header />
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
               <Route path={routes.home} element={<Trend />} />
