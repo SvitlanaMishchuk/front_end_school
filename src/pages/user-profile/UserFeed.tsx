@@ -1,5 +1,5 @@
-import { Avatar, Typography } from "@mui/material";
-import React, { useEffect, useRef, useState } from "react";
+import { Typography } from "@mui/material";
+import { useEffect, useRef, useState } from "react";
 import { useGetUserFeed } from "../../api-hooks/useGetUserFeed";
 import { UserPost, UserProfile } from "../../models";
 import { makeStyles } from "@mui/styles";

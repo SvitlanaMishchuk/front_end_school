@@ -6,26 +6,32 @@ export const useStyles = makeStyles({
     height: 50,
     borderRadius: "50%",
   },
+
   postTitle: {
     display: "flex",
     gap: 5,
     alignItems: "center",
     "&:hover": {
       textDecoration: "underline",
-      cursor: "pointer"
+      cursor: "pointer",
     },
   },
+
   tags: {
     display: "flex",
     gap: 5,
   },
+
   postVideoContainer: {
     position: "relative",
   },
 
   postVideo: {
     background: "#c2c2c2",
+    maxWidth: 350,
+    margin: "0 auto",
   },
+
   postVideoPlayButton: {
     // TODO fix important issue and remove any type
     position: "absolute!important" as any,

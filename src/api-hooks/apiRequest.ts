@@ -9,5 +9,6 @@ export const apiRequest = (
       "x-rapidapi-host": "tiktok33.p.rapidapi.com",
       "x-rapidapi-key": "ab07a9664emshc209d643777f489p1e0647jsn28d64e110ef5",
     },
-  });
+  })
+  .then(res => res.json())
 };
