@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+# Practice Task Front-End School
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Web application to view the feed and user profile page, used https://rapidapi.com/premium-apis-premium-apis-default/api/tiktok33/
 
 ## Available Scripts
 
-In the project directory, you can run:
-
+To start the app locally you need to download this project folder to your PC, go to the project folder and do next commands:
+### `yarn install`
 ### `yarn start`
 
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Project implementation logic
 
-### `yarn test`
+I have started work with acquaintance with API, learning of project requirements and build implementation plan. I chose for development React, TypeScript and Material UI for styling.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Implementation Plan
 
-### `yarn build`
+1. Create app using Create React App
+2. Set up routing and clean up unused part of the react template app
+3. Create Header component
+4. Add useQuery to work with requests
+5. Set up API Hooks to get data and models
+6. Create Trend Page ( create layout for page, create Post component)
+7. Create User Profile Page (create components for User Info and User Feed)
+8. Handle errors from API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+9. Posts paginated*
+10. Autoplay video on scrolling*
+11. Test coverage*
+12. Better error handling with snackbar global mechanism*
+13. Improve mobile version*
+14. Animation for video loading*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+I didn't have time to implement all the tasks (namely the items from the list above, marked *: 9-14).
