@@ -10,6 +10,10 @@ export const useStyles = makeStyles({
     display: "flex",
     gap: 5,
     alignItems: "center",
+    "&:hover": {
+      textDecoration: "underline",
+      cursor: "pointer"
+    },
   },
   tags: {
     display: "flex",

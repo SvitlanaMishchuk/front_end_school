@@ -2,13 +2,13 @@ import { Typography } from "@mui/material";
 import { Post } from "../../../models";
 import { useStyles } from "./styles";
 
-export const Title = ({
-  name,
-  nickName,
-}: Pick<Post["author"], "name" | "nickName">) => {
+export interface TitleProps extends Pick<Post["author"], "name" | "nickName"> {
+  onClick: VoidFunction;
+}
+export const Title = ({ name, nickName, onClick }: TitleProps) => {
   const classes = useStyles();
   return (
-    <div className={classes.postTitle}>
+    <div onClick={onClick} className={classes.postTitle}>
       <Typography fontWeight={"bold"} component={"span"}>
         {name}
       </Typography>
