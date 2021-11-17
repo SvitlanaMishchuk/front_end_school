@@ -1,9 +1,4 @@
-export interface Author {
-  id: string;
-  name: string;
-  nickName: string;
-  avatar: string;
-}
+import { Author } from "./Author";
 
 export interface Hashtag {
   id: string;

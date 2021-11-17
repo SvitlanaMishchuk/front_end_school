@@ -2,7 +2,8 @@ export const apiRequest = (
   url: string,
   options?: RequestInit
 ): Promise<Response> => {
-  return fetch(url, {
+  const fullUrl = 'https://tiktok33.p.rapidapi.com' + url;
+  return fetch(fullUrl, {
     ...options,
     headers: {
       "x-rapidapi-host": "tiktok33.p.rapidapi.com",
