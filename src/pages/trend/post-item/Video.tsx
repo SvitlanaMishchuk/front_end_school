@@ -1,34 +1,34 @@
-import React, { useState, useRef, useMemo } from "react";
-import PauseIcon from "@mui/icons-material/Pause";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import { CardMedia, IconButton } from "@mui/material";
+import React, { useState, useRef, useMemo } from 'react';
+import PauseIcon from '@mui/icons-material/Pause';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import { CardMedia, IconButton } from '@mui/material';
 
-import { useStyles } from "./styles";
-import { Post } from "../../../models";
+import { useStyles } from './styles';
+import { Post } from '../../../models';
 
-export const Video = ({ videoUrl }: Pick<Post, "videoUrl">) => {
+export var Video = function ({ videoUrl }: Pick<Post, 'videoUrl'>) {
   const [isHovering, setIsHovering] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const ref = useRef<HTMLVideoElement | null>(null);
+  const reference = useRef<HTMLVideoElement | null>(null);
   const classes = useStyles();
 
   const handlePlayPause = () => {
-    if (!ref.current) {
+    if (!reference.current) {
       return;
     }
 
-    const isPaused = ref.current.paused;
+    const isPaused = reference.current.paused;
     if (isPaused) {
-      ref.current.play();
+      reference.current.play();
       setIsPlaying(true);
     } else {
-      ref.current.pause();
+      reference.current.pause();
       setIsPlaying(false);
     }
   };
 
-  const handleHovering = (val: boolean) => () => setIsHovering(val);
+  const handleHovering = (value: boolean) => () => setIsHovering(value);
 
   const playPauseButton = useMemo(() => {
     const icon = isPlaying ? <PauseIcon /> : <PlayArrowIcon />;
@@ -55,7 +55,7 @@ export const Video = ({ videoUrl }: Pick<Post, "videoUrl">) => {
       {playPauseButton}
       <CardMedia
         className={classes.postVideo}
-        ref={ref}
+        ref={reference}
         component="video"
         image={videoUrl}
       />

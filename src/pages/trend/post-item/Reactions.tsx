@@ -1,28 +1,28 @@
-import React from "react";
-import { IconButton, Badge } from "@mui/material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
-import { Post } from "../../../models";
-import { numFormatter } from "../../../helpers";
-import { useStyles } from "./styles";
+import React from 'react';
+import { IconButton, Badge } from '@mui/material';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
+import { Post } from '../../../models';
+import { numFormatter as numberFormatter } from '../../../helpers';
+import { useStyles } from './styles';
 
-export const Reactions = ({
+export var Reactions = function ({
   likesCount,
   commentsCount,
-}: Pick<Post, "likesCount" | "commentsCount">) => {
+}: Pick<Post, 'likesCount' | 'commentsCount'>) {
   const classes = useStyles();
   return (
     <>
       <IconButton
-        disableRipple={true}
-        disabled={true}
+        disableRipple
+        disabled
         className={classes.postLikes}
       >
         <Badge
-          badgeContent={numFormatter(likesCount)}
+          badgeContent={numberFormatter(likesCount)}
           anchorOrigin={{
-            vertical: "top",
-            horizontal: "left",
+            vertical: 'top',
+            horizontal: 'left',
           }}
           color="primary"
         >
@@ -30,15 +30,15 @@ export const Reactions = ({
         </Badge>
       </IconButton>
       <IconButton
-        disableRipple={true}
-        disabled={true}
+        disableRipple
+        disabled
         className={classes.postLikes}
       >
         <Badge
-          badgeContent={numFormatter(commentsCount)}
+          badgeContent={numberFormatter(commentsCount)}
           anchorOrigin={{
-            vertical: "top",
-            horizontal: "left",
+            vertical: 'top',
+            horizontal: 'left',
           }}
           color="primary"
         >

@@ -1,12 +1,14 @@
-import { Dialog, DialogTitle, DialogActions, Button } from "@mui/material";
+import {
+  Dialog, DialogTitle, DialogActions, Button,
+} from '@mui/material';
 
-export interface TrendErrorDialogProps {
+export interface TrendErrorDialogProperties {
   refetch: VoidFunction;
 }
 
-export const TrendErrorDialog = ({ refetch }: TrendErrorDialogProps) => {
+export var TrendErrorDialog = function ({ refetch }: TrendErrorDialogProperties) {
   return (
-    <Dialog open={true}>
+    <Dialog open>
       <DialogTitle>Something went wrong. Please try again</DialogTitle>
       <DialogActions>
         <Button onClick={refetch}>try again</Button>

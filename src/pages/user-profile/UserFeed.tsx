@@ -1,64 +1,62 @@
-import { Typography } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
-import { useGetUserFeed } from "../../api-hooks/useGetUserFeed";
-import { UserPost, UserProfile } from "../../models";
-import { makeStyles } from "@mui/styles";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import { numFormatter } from "../../helpers";
+import { Typography } from '@mui/material';
+import { useEffect, useRef, useState } from 'react';
+import { makeStyles } from '@mui/styles';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import { useGetUserFeed } from '../../api-hooks/useGetUserFeed';
+import { UserPost, UserProfile } from '../../models';
+import { numFormatter as numberFormatter } from '../../helpers';
 
 const useStyles = makeStyles({
   userFeedContainer: {
-    display: "grid",
-    gridTemplateColumns: "repeat(3, 3fr)",
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 3fr)',
     gridGap: 8,
   },
   postItemContainer: {
-    position: "relative",
+    position: 'relative',
   },
   imgPreview: {
-    width: "100%",
+    width: '100%',
   },
   postInfoContainer: {
-    position: "absolute",
+    position: 'absolute',
     left: 10,
     bottom: 10,
-    color: "#fff",
-    display: "grid",
-    gridTemplateColumns: "24px auto",
+    color: '#fff',
+    display: 'grid',
+    gridTemplateColumns: '24px auto',
   },
 });
 
-const PostPreview = (post: UserPost) => {
+const PostPreview = function (post: UserPost) {
   const classes = useStyles();
   const [isHovering, setIsHovering] = useState(false);
 
-  const ref = useRef<HTMLVideoElement | null>(null);
+  const reference = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
-    if (!ref.current) {
+    if (!reference.current) {
       return;
     }
 
-    isHovering ? ref.current.play() : ref.current.pause();
+    isHovering ? reference.current.play() : reference.current.pause();
   }, [isHovering]);
 
-  const handleHovering = (val: boolean) => () => setIsHovering(val);
+  const handleHovering = (value: boolean) => () => setIsHovering(value);
 
   return (
     <video
       onMouseEnter={handleHovering(true)}
       onMouseLeave={handleHovering(false)}
-      ref={ref}
+      ref={reference}
       className={classes.imgPreview}
-      muted={true}
-      src={
-        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
-      }
+      muted
+      src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
     />
   );
 };
 
-export const UserPostItem = (post: UserPost) => {
+export var UserPostItem = function (post: UserPost) {
   const classes = useStyles();
   return (
     <div className={classes.postItemContainer}>
@@ -68,17 +66,17 @@ export const UserPostItem = (post: UserPost) => {
   );
 };
 
-export const PostInfo = (post: UserPost) => {
+export var PostInfo = function (post: UserPost) {
   const classes = useStyles();
   return (
     <div className={classes.postInfoContainer}>
       <PlayArrowIcon />
-      <Typography>{numFormatter(post.viewCount)}</Typography>
+      <Typography>{numberFormatter(post.viewCount)}</Typography>
     </div>
   );
 };
 
-export const UserFeed = ({ name }: Pick<UserProfile, "name">) => {
+export var UserFeed = function ({ name }: Pick<UserProfile, 'name'>) {
   const { posts } = useGetUserFeed(name);
   const classes = useStyles();
 
