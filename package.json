@@ -52,14 +52,15 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^15.0.0",
+    "@commitlint/cli": "^16.0.1",
     "@commitlint/config-conventional": "^15.0.0",
     "@typescript-eslint/parser": "^5.8.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jest": "^25.3.0",
     "eslint-plugin-more": "^1.0.5",
     "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-regex": "^1.8.0",
-    "eslint-plugin-unicorn": "^39.0.0"
+    "eslint-plugin-regexp": "^1.5.1",
+    "eslint-plugin-unicorn": "^39.0.0",
+    "husky": "^7.0.4"
   }
 }
