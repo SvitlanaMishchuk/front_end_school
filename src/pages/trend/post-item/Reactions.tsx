@@ -12,11 +12,7 @@ export const Reactions = ({
   const classes = useStyles();
   return (
     <>
-      <IconButton
-        disableRipple
-        disabled
-        className={classes.postLikes}
-      >
+      <IconButton disableRipple disabled className={classes.postLikes}>
         <Badge
           badgeContent={numberFormatter(likesCount)}
           anchorOrigin={{
@@ -28,11 +24,7 @@ export const Reactions = ({
           <FavoriteIcon fontSize="large" color="action" />
         </Badge>
       </IconButton>
-      <IconButton
-        disableRipple
-        disabled
-        className={classes.postLikes}
-      >
+      <IconButton disableRipple disabled className={classes.postLikes}>
         <Badge
           badgeContent={numberFormatter(commentsCount)}
           anchorOrigin={{

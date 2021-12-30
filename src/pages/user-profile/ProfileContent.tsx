@@ -20,17 +20,18 @@ const useStyles = makeStyles({
 });
 
 export const ProfileContent = ({
-  name, nickName, avatar, followersCount, followingCount, likesCount,
+  name,
+  nickName,
+  avatar,
+  followersCount,
+  followingCount,
+  likesCount,
 }: UserProfile) => {
   const classes = useStyles();
   return (
     <div className={classes.profileContainer}>
       <div className={classes.userInfoContainer}>
-        <Avatar
-          alt={name}
-          src={avatar}
-          sx={{ width: 128, height: 128 }}
-        />
+        <Avatar alt={name} src={avatar} sx={{ width: 128, height: 128 }} />
         <div>
           <Typography component="h4" variant="h4">
             {nickName}

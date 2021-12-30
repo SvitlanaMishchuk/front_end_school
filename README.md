@@ -5,7 +5,9 @@ Web application to view the feed and user profile page, used https://rapidapi.co
 ## Available Scripts
 
 To start the app locally you need to download this project folder to your PC, go to the project folder and do next commands:
+
 ### `yarn install`
+
 ### `yarn start`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -25,11 +27,11 @@ I have started work with acquaintance with API, learning of project requirements
 7. Create User Profile Page (create components for User Info and User Feed)
 8. Handle errors from API
 
-9. Posts paginated*
-10. Autoplay video on scrolling*
-11. Test coverage*
-12. Better error handling with snackbar global mechanism*
-13. Improve mobile version*
-14. Animation for video loading*
+9. Posts paginated\*
+10. Autoplay video on scrolling\*
+11. Test coverage\*
+12. Better error handling with snackbar global mechanism\*
+13. Improve mobile version\*
+14. Animation for video loading\*
 
-I didn't have time to implement all the tasks (namely the items from the list above, marked *: 9-14).
+I didn't have time to implement all the tasks (namely the items from the list above, marked \*: 9-14).

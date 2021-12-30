@@ -11,7 +11,12 @@ import { Video } from './Video';
 import { routes } from '../../../constants';
 
 export const PostItem = ({
-  author, text, likesCount, commentsCount, videoUrl, hashtags,
+  author,
+  text,
+  likesCount,
+  commentsCount,
+  videoUrl,
+  hashtags,
 }: Post) => {
   const navigate = useNavigate();
 
@@ -26,12 +31,9 @@ export const PostItem = ({
         avatar={<UserAvatar {...author} />}
         title={<Title onClick={handleGoToUser} {...author} />}
         subheader={text}
-        action={(
-          <Reactions
-            likesCount={likesCount}
-            commentsCount={commentsCount}
-          />
-        )}
+        action={
+          <Reactions likesCount={likesCount} commentsCount={commentsCount} />
+        }
       />
       <Video videoUrl={videoUrl} />
       <CardContent>

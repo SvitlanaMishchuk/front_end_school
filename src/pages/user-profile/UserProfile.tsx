@@ -35,11 +35,13 @@ const UserProfile = () => {
     );
   }
 
-  return data && (
-    <>
-      <ProfileContent {...data} />
-      <UserFeed name={name} />
-    </>
+  return (
+    data && (
+      <>
+        <ProfileContent {...data} />
+        <UserFeed name={name} />
+      </>
+    )
   );
 };
 

@@ -13,9 +13,9 @@ const Trend = () => {
   } = useGetTrendingFeed();
 
   if (isFetching) {
-    const renderArray = [...Array.from({ length: skeletonCount })].map((_, index) => (
-      <PostItemSkeleton key={+index} />
-    ));
+    const renderArray = [...Array.from({ length: skeletonCount })].map(
+      (_, index) => <PostItemSkeleton key={+index} />,
+    );
     return <div className={classes.container}>{renderArray}</div>;
   }
 
