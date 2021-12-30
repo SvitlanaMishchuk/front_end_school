@@ -34,7 +34,7 @@ export const useStyles = makeStyles({
 
   postVideoPlayButton: {
     // TODO fix important issue and remove any type
-    position: 'absolute!important' as any,
+    position: 'absolute!important' as never,
     top: '50%',
     left: '50%',
     height: 100,

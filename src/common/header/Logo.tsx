@@ -8,7 +8,7 @@ const useStyles = makeStyles({
   },
 });
 
-export var Logo = function () {
+export const Logo = () => {
   const classes = useStyles();
   return <img className={classes.img} src={logo} alt="logo" />;
 };

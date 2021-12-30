@@ -4,7 +4,7 @@ import { makeStyles } from '@mui/styles';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { useGetUserFeed } from '../../api-hooks/useGetUserFeed';
 import { UserPost, UserProfile } from '../../models';
-import { numFormatter as numberFormatter } from '../../helpers';
+import { numberFormatter } from '../../helpers';
 
 const useStyles = makeStyles({
   userFeedContainer: {
@@ -28,7 +28,7 @@ const useStyles = makeStyles({
   },
 });
 
-const PostPreview = function (post: UserPost) {
+const PostPreview = () => {
   const classes = useStyles();
   const [isHovering, setIsHovering] = useState(false);
 
@@ -38,8 +38,11 @@ const PostPreview = function (post: UserPost) {
     if (!reference.current) {
       return;
     }
-
-    isHovering ? reference.current.play() : reference.current.pause();
+    if (isHovering) {
+      reference.current.play();
+    } else {
+      reference.current.pause();
+    }
   }, [isHovering]);
 
   const handleHovering = (value: boolean) => () => setIsHovering(value);
@@ -56,7 +59,17 @@ const PostPreview = function (post: UserPost) {
   );
 };
 
-export var UserPostItem = function (post: UserPost) {
+export const PostInfo = ({ viewCount }: UserPost) => {
+  const classes = useStyles();
+  return (
+    <div className={classes.postInfoContainer}>
+      <PlayArrowIcon />
+      <Typography>{numberFormatter(viewCount)}</Typography>
+    </div>
+  );
+};
+
+export const UserPostItem = (post: UserPost) => {
   const classes = useStyles();
   return (
     <div className={classes.postItemContainer}>
@@ -66,17 +79,7 @@ export var UserPostItem = function (post: UserPost) {
   );
 };
 
-export var PostInfo = function (post: UserPost) {
-  const classes = useStyles();
-  return (
-    <div className={classes.postInfoContainer}>
-      <PlayArrowIcon />
-      <Typography>{numberFormatter(post.viewCount)}</Typography>
-    </div>
-  );
-};
-
-export var UserFeed = function ({ name }: Pick<UserProfile, 'name'>) {
+export const UserFeed = ({ name }: Pick<UserProfile, 'name'>) => {
   const { posts } = useGetUserFeed(name);
   const classes = useStyles();
 

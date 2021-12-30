@@ -5,6 +5,8 @@ import { UserProfile } from '../models';
  * @param entity untyped response entity
  * @returns UserProfile
  */
+// Disabled due we don't know http response type
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const transformUserProfile = (entity: any): UserProfile => ({
   id: entity.user.id,
   avatar: entity.user.avatarMedium,

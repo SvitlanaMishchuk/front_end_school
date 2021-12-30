@@ -10,30 +10,32 @@ import { Hashtags } from './Hashtags';
 import { Video } from './Video';
 import { routes } from '../../../constants';
 
-export var PostItem = function (properties: Post) {
+export const PostItem = ({
+  author, text, likesCount, commentsCount, videoUrl, hashtags,
+}: Post) => {
   const navigate = useNavigate();
 
   const handleGoToUser = () => {
-    const url = routes.profile.replace(':name', properties.author.name);
+    const url = routes.profile.replace(':name', author.name);
     navigate(url);
   };
 
   return (
     <Card>
       <CardHeader
-        avatar={<UserAvatar {...properties.author} />}
-        title={<Title onClick={handleGoToUser} {...properties.author} />}
-        subheader={properties.text}
+        avatar={<UserAvatar {...author} />}
+        title={<Title onClick={handleGoToUser} {...author} />}
+        subheader={text}
         action={(
           <Reactions
-            likesCount={properties.likesCount}
-            commentsCount={properties.commentsCount}
+            likesCount={likesCount}
+            commentsCount={commentsCount}
           />
         )}
       />
-       <Video videoUrl={properties.videoUrl} />
+      <Video videoUrl={videoUrl} />
       <CardContent>
-        <Hashtags hashtags={properties.hashtags} />
+        <Hashtags hashtags={hashtags} />
       </CardContent>
     </Card>
   );

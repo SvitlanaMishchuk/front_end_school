@@ -6,7 +6,7 @@ import { useStyles } from './styles';
 import { TrendErrorDialog } from './TrendErrorDialog';
 
 const skeletonCount = 5;
-const Trend = function () {
+const Trend = () => {
   const classes = useStyles();
   const {
     posts, refetch, isFetching, isFetched, error,
@@ -14,7 +14,7 @@ const Trend = function () {
 
   if (isFetching) {
     const renderArray = [...Array.from({ length: skeletonCount })].map((_, index) => (
-      <PostItemSkeleton key={index} />
+      <PostItemSkeleton key={+index} />
     ));
     return <div className={classes.container}>{renderArray}</div>;
   }

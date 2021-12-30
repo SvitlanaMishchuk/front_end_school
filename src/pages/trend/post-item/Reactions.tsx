@@ -1,15 +1,14 @@
-import React from 'react';
 import { IconButton, Badge } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import { Post } from '../../../models';
-import { numFormatter as numberFormatter } from '../../../helpers';
+import { numberFormatter } from '../../../helpers';
 import { useStyles } from './styles';
 
-export var Reactions = function ({
+export const Reactions = ({
   likesCount,
   commentsCount,
-}: Pick<Post, 'likesCount' | 'commentsCount'>) {
+}: Pick<Post, 'likesCount' | 'commentsCount'>) => {
   const classes = useStyles();
   return (
     <>

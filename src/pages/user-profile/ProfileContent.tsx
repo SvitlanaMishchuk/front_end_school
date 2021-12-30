@@ -1,6 +1,6 @@
 import { Avatar, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { numFormatter as numberFormatter } from '../../helpers';
+import { numberFormatter } from '../../helpers';
 import { UserProfile } from '../../models';
 
 const useStyles = makeStyles({
@@ -19,39 +19,41 @@ const useStyles = makeStyles({
   },
 });
 
-export var ProfileContent = function (profile: UserProfile) {
+export const ProfileContent = ({
+  name, nickName, avatar, followersCount, followingCount, likesCount,
+}: UserProfile) => {
   const classes = useStyles();
   return (
     <div className={classes.profileContainer}>
       <div className={classes.userInfoContainer}>
         <Avatar
-          alt={profile.name}
-          src={profile.avatar}
+          alt={name}
+          src={avatar}
           sx={{ width: 128, height: 128 }}
         />
         <div>
           <Typography component="h4" variant="h4">
-            {profile.nickName}
+            {nickName}
           </Typography>
-          <Typography component="p">{profile.name}</Typography>
+          <Typography component="p">{name}</Typography>
         </div>
       </div>
       <div className={classes.statsContainer}>
         <div>
           <Typography component="h4" variant="h4">
-            {numberFormatter(profile.followersCount)}
+            {numberFormatter(followersCount)}
           </Typography>
           <Typography component="p">Followers</Typography>
         </div>
         <div>
           <Typography component="h4" variant="h4">
-            {numberFormatter(profile.followingCount)}
+            {numberFormatter(followingCount)}
           </Typography>
           <Typography component="p">Following</Typography>
         </div>
         <div>
           <Typography component="h4" variant="h4">
-            {numberFormatter(profile.likesCount)}
+            {numberFormatter(likesCount)}
           </Typography>
           <Typography component="p">Likes</Typography>
         </div>

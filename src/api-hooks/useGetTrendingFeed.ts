@@ -5,13 +5,13 @@ import { apiRequest } from './apiRequest';
 export const useGetTrendingFeed = (limit = 30) => {
   const key = `get_trending_feed_${limit}`;
   const url = `/trending/feed?limit=${limit}`;
-  const res = useQuery(key, async () => {
-    const rawPosts = await apiRequest(url) as unknown as any[];
-    return rawPosts.map(transformPost);
+  const response = useQuery(key, async () => {
+    const rawPosts = await apiRequest(url) as unknown as never[];
+    return rawPosts.map((element) => transformPost(element));
   }, { refetchOnWindowFocus: false });
 
   return {
-    ...res,
-    posts: res.data ?? [],
+    ...response,
+    posts: response.data ?? [],
   };
 };

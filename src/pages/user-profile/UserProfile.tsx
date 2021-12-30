@@ -10,7 +10,7 @@ type UserProfileParameters = {
   name: string;
 };
 
-const UserProfile = function () {
+const UserProfile = () => {
   const { name } = useParams() as UserProfileParameters;
   const {
     data, isFetched, isFetching, error,
@@ -19,7 +19,10 @@ const UserProfile = function () {
   const navigate = useNavigate();
 
   if (isFetched && !data && error) {
+    // Show error for user
+    // eslint-disable-next-line no-console
     console.error('user profile fetch error', error);
+    // eslint-disable-next-line no-alert
     alert('Something went wrong. Redirecting to the home page');
     navigate(routes.home);
   }
@@ -32,12 +35,12 @@ const UserProfile = function () {
     );
   }
 
-  return data ? (
+  return data && (
     <>
       <ProfileContent {...data} />
       <UserFeed name={name} />
     </>
-  ) : null;
+  );
 };
 
 export default UserProfile;

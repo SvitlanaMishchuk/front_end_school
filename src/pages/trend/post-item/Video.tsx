@@ -1,4 +1,4 @@
-import React, { useState, useRef, useMemo } from 'react';
+import { useState, useRef, useMemo } from 'react';
 import PauseIcon from '@mui/icons-material/Pause';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { CardMedia, IconButton } from '@mui/material';
@@ -6,7 +6,7 @@ import { CardMedia, IconButton } from '@mui/material';
 import { useStyles } from './styles';
 import { Post } from '../../../models';
 
-export var Video = function ({ videoUrl }: Pick<Post, 'videoUrl'>) {
+export const Video = ({ videoUrl }: Pick<Post, 'videoUrl'>) => {
   const [isHovering, setIsHovering] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -43,6 +43,7 @@ export var Video = function ({ videoUrl }: Pick<Post, 'videoUrl'>) {
       );
     }
 
+    // eslint-disable-next-line unicorn/no-null
     return null;
   }, [isHovering, isPlaying, classes.postVideoPlayButton]);
 

@@ -9,23 +9,20 @@ const UserProfile = lazy(() => import('./pages/user-profile/UserProfile'));
 
 const queryClient = new QueryClient();
 
-const App = function () {
-  console.log('gete');
-  return (
-    <QueryClientProvider client={queryClient}>
-      <Router>
-        <Layout>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Routes>
-              <Route path={routes.home} element={<Trend />} />
-              <Route path={routes.profile} element={<UserProfile />} />
-              <Route path="*" element={<>"404"</>} />
-            </Routes>
-          </Suspense>
-        </Layout>
-      </Router>
-    </QueryClientProvider>
-  );
-};
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <Router>
+      <Layout>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path={routes.home} element={<Trend />} />
+            <Route path={routes.profile} element={<UserProfile />} />
+            <Route path="*" element={<>`404`</>} />
+          </Routes>
+        </Suspense>
+      </Layout>
+    </Router>
+  </QueryClientProvider>
+);
 
 export default App;

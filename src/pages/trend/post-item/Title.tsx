@@ -5,10 +5,10 @@ import { useStyles } from './styles';
 export interface TitleProperties extends Pick<Post['author'], 'name' | 'nickName'> {
   onClick: VoidFunction;
 }
-export var Title = function ({ name, nickName, onClick }: TitleProperties) {
+export const Title = ({ name, nickName, onClick }: TitleProperties) => {
   const classes = useStyles();
   return (
-    <div onClick={onClick} className={classes.postTitle}>
+    <div role="link" tabIndex={0} onClick={onClick} onKeyDown={onClick} className={classes.postTitle}>
       <Typography fontWeight="bold" component="span">
         {name}
       </Typography>

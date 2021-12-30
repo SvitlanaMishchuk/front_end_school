@@ -5,6 +5,8 @@ import { UserPost } from '../models';
  * @param entity untyped response entity
  * @returns UserPost
  */
+// Disabled due we don't know http response type
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const transformUserPost = (entity: any): UserPost => ({
   id: entity.id,
   cover: entity.video.cover,
