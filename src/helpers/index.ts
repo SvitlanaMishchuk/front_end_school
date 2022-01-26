@@ -1,1 +1,1 @@
-export * from "./numFormatter";
+export * from './numberFormatter';

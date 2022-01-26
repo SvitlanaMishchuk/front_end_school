@@ -1,7 +1,7 @@
-import { Container } from "@mui/material";
-import { PropsWithChildren } from "react";
-import { Header } from "../header";
-import { useStyles } from "./styles";
+import { Container } from '@mui/material';
+import { PropsWithChildren } from 'react';
+import { Header } from '../header';
+import { useStyles } from './styles';
 
 export const Layout = ({ children }: PropsWithChildren<unknown>) => {
   const classes = useStyles();

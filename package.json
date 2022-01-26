@@ -15,7 +15,11 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "eslint-config-airbnb": "^19.0.2",
+    "lint-staged": "^12.1.4",
     "node-sass": "^5.0.0",
+    "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-query": "^3.32.3",
@@ -28,7 +32,8 @@
     "start": "FAST_REFRESH=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx ."
   },
   "eslintConfig": {
     "extends": [
@@ -47,5 +52,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@typescript-eslint/parser": "^5.8.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.3.0",
+    "eslint-plugin-more": "^1.0.5",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-regexp": "^1.5.1",
+    "eslint-plugin-unicorn": "^39.0.0",
+    "husky": "^7.0.4"
   }
 }

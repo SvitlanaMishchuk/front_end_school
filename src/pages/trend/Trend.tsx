@@ -1,19 +1,21 @@
-import { useGetTrendingFeed } from "../../api-hooks/useGetTrendingFeed";
-import { Post } from "../../models";
-import { PostItem } from "./post-item";
-import { PostItemSkeleton } from "./PostItemSkeleton";
-import { useStyles } from "./styles";
-import { TrendErrorDialog } from "./TrendErrorDialog";
+import { useGetTrendingFeed } from '../../api-hooks/useGetTrendingFeed';
+import { Post } from '../../models';
+import { PostItem } from './post-item';
+import { PostItemSkeleton } from './PostItemSkeleton';
+import { useStyles } from './styles';
+import { TrendErrorDialog } from './TrendErrorDialog';
 
 const skeletonCount = 5;
 const Trend = () => {
   const classes = useStyles();
-  const { posts, refetch, isFetching, isFetched, error } = useGetTrendingFeed();
+  const {
+    posts, refetch, isFetching, isFetched, error,
+  } = useGetTrendingFeed();
 
   if (isFetching) {
-    const renderArray = Array.from(new Array(skeletonCount)).map((_, idx) => (
-      <PostItemSkeleton key={idx} />
-    ));
+    const renderArray = [...Array.from({ length: skeletonCount })].map(
+      (_, index) => <PostItemSkeleton key={+index} />,
+    );
     return <div className={classes.container}>{renderArray}</div>;
   }
 
