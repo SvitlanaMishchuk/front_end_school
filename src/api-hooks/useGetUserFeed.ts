@@ -1,18 +1,20 @@
 import { useQuery } from 'react-query';
 import { transformUserPost } from '../utils';
 import { UserProfile } from '../models';
-import { apiRequest } from './apiRequest';
+import { apiService } from '../api-service/apiService';
 
 export const useGetUserFeed = (name: UserProfile['name'], limit = 30) => {
   const key = `get_user_feed_${name}_${limit}`;
-  const url = `/user/feed/${name}?limit=${limit}`;
-  const response = useQuery(key, async () => {
-    const rawFeed = (await apiRequest(url)) as unknown as never[];
-    return rawFeed.map((element) => transformUserPost(element));
-  });
+  const response = useQuery(
+    key,
+    () => apiService.userService.getUserFeed(name, limit),
+  );
+
+  const userFeeds = response.data && response.data.length
+    ? response.data.map((element: unknown) => transformUserPost(element)) : [];
 
   return {
     ...response,
-    posts: response.data ?? [],
+    posts: userFeeds,
   };
 };

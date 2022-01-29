@@ -2,7 +2,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { CircularProgress } from '@mui/material';
 import { useGetUserProfile } from '../../api-hooks/useGetUserProfile';
 import { routes } from '../../constants';
-import { UserFeed } from './UserFeed';
+import { UserFeed } from './user-feed/UserFeed';
 import { ProfileContent } from './ProfileContent';
 import { useStyles } from './styles';
 
@@ -45,4 +45,4 @@ const UserProfile = () => {
   );
 };
 
-export default UserProfile;
+export default UserProfile as React.ComponentType<unknown>;
