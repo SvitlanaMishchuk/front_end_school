@@ -1,0 +1,35 @@
+{
+    "user": {
+      "id": "123",
+      "shortId": "0",
+      "uniqueId": "testName",
+      "nickname": "Test Name",
+      "avatarLarger": "https://p16-sign-sg.tiktokcdn.com/aweme/1080x1080/tos-alisg-avt-0068/a4777fe51994e2ff798bdc9dd1100846.jpeg?x-expires=1637089200&x-signature=AI9QoPIXQX%2F4YTxzLf%2BA5beaSO8%3D",
+      "avatarMedium": "https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/a4777fe51994e2ff798bdc9dd1100846.jpeg?x-expires=1637089200&x-signature=U5vtfhg6CM%2BmKOh6DT24I0SecWk%3D",
+      "avatarThumb": "https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/a4777fe51994e2ff798bdc9dd1100846.jpeg?x-expires=1637089200&x-signature=vVk8Ybx5%2BiDxpQCldoEQIGGnKBU%3D",
+      "signature": "@xoteam Instagram: @kikakim Cooperation: kikakim.booking@gmail.com",
+      "createTime": 1580207691,
+      "verified": false,
+      "secUid": "45-3",
+      "ftc": false,
+      "relation": 0,
+      "openFavorite": false,
+      "commentSetting": 0,
+      "duetSetting": 0,
+      "stitchSetting": 0,
+      "privateAccount": false,
+      "secret": false,
+      "isADVirtual": false,
+      "roomId": ""
+    },
+    "stats": {
+      "followerCount": 24000000,
+      "followingCount": 88,
+      "heart": 626900000,
+      "heartCount": 626900000,
+      "videoCount": 827,
+      "diggCount": 0
+    },
+    "itemList": []
+  }
+  

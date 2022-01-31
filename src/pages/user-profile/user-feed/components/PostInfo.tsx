@@ -11,7 +11,7 @@ export const PostInfo = ({ viewCount }: UserPost) => {
   return (
     <div className={classes.postInfoContainer}>
       <PlayArrowIcon />
-      <Typography>{numberFormatter(viewCount)}</Typography>
+      <Typography data-testid="printed-viewcount">{numberFormatter(viewCount)}</Typography>
     </div>
   );
 };

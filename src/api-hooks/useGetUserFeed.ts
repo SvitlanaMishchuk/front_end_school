@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query';
 import { transformUserPost } from '../utils';
-import { UserProfile } from '../models';
+import { UserPost, UserProfile } from '../models';
 import { apiService } from '../api-service/apiService';
 
 export const useGetUserFeed = (name: UserProfile['name'], limit = 30) => {
@@ -10,8 +10,17 @@ export const useGetUserFeed = (name: UserProfile['name'], limit = 30) => {
     () => apiService.userService.getUserFeed(name, limit),
   );
 
-  const userFeeds = response.data && response.data.length
-    ? response.data.map((element: unknown) => transformUserPost(element)) : [];
+  const userFeeds: UserPost[] = [];
+  if (response.data && response.data.length) {
+    try {
+      response.data.forEach((element: unknown) => {
+        const transformedFeed = transformUserPost(element);
+        if (transformedFeed) {
+          userFeeds.push(transformedFeed);
+        }
+      });
+    } catch (e) {}
+  }
 
   return {
     ...response,

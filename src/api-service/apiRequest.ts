@@ -15,7 +15,7 @@ export type ApiRequest = (
   url: string,
   options?: RequestInit | undefined
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-) => Promise<unknown>;
+) => Promise<any>;
 
 export const apiRequest: ApiRequest = async (
   url: string,
