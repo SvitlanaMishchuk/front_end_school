@@ -1,0 +1,100 @@
+{
+    "id": "123",
+    "desc": "The last day in Turkey😭🇹🇷 Inst: kikakim🤍",
+    "createTime": 1636817169,
+    "video": {
+      "id": "123",
+      "height": 960,
+      "width": 540,
+      "duration": 8,
+      "ratio": "720p",
+      "cover": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "originCover": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "dynamicCover": "https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/2793e67efe2149f6b91164d6556022c9_1636817171?x-expires=1637028000&x-signature=nm9n300RVR%2BkLEki4mjTD%2BPKtJw%3D",
+      "playAddr": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "downloadAddr": "https://v16-web.tiktok.com/video/tos/alisg/tos-alisg-pve-0037c001/65b5bb692c144b8c8ee9ade7b60ffca5/?a=1988&br=4592&bt=2296&cd=0%7C0%7C1&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&expire=1637030170&ft=wUyFfF5qkag3-I&l=20211115203602010189064232103B783C&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&policy=3&qs=0&rc=M3ZxMzs6Zjt3OTMzODczNEApNDU3NzhmZTxlNzxpNDdmZWdlcGxqcjRvZTRgLS1kMS1zcy82YTU1MWE1My0xX2IxLWI6Yw%3D%3D&signature=1ce8768716d1b33124a8fef4ebd6e047&tk=0&vl=&vr=",
+      "shareCover": [
+        "",
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/e854be2cefac434cabb13ce70ac4bdda_1636817170~tplv-tiktok-play.jpeg?x-expires=1637028000&x-signature=c%2FDmsIAnVBl0GyWn9lmmU%2BPMR1c%3D",
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/e854be2cefac434cabb13ce70ac4bdda_1636817170~tplv-tiktokx-share-play.jpeg?x-expires=1637028000&x-signature=fH3sPhmkpluinnQygjMKq%2FreEpA%3D"
+      ],
+      "reflowCover": "https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/9eaba8c7b4c64bff8baf32eca8f8e875_1636817170?x-expires=1637028000&x-signature=ci4%2BxnqFbuDvP%2BUhzf7niNfOpmI%3D",
+      "bitrate": 2351692,
+      "encodedType": "normal",
+      "format": "mp4",
+      "videoQuality": "normal",
+      "encodeUserTag": "",
+      "codecType": "h264",
+      "definition": "720p"
+    },
+    "author": {
+      "id": "1",
+      "uniqueId": "testName",
+      "nickname": "Test Name",
+      "avatarThumb": "https://static.vecteezy.com/system/resources/thumbnails/001/993/889/small/beautiful-latin-woman-avatar-character-icon-free-vector.jpg",
+      "avatarMedium": "https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/a4777fe51994e2ff798bdc9dd1100846.jpeg?x-expires=1637092800&x-signature=38X7Lt2%2BtWEeJZ9e7ldpfdz4uVs%3D",
+      "avatarLarger": "https://p16-sign-sg.tiktokcdn.com/aweme/1080x1080/tos-alisg-avt-0068/a4777fe51994e2ff798bdc9dd1100846.jpeg?x-expires=1637092800&x-signature=ZcISPY9VZa4V75Rh6TiYmAkoS%2BE%3D",
+      "signature": "@xoteam Instagram: @kikakim Cooperation: kikakim.booking@gmail.com",
+      "verified": false,
+      "secUid": "asd-32",
+      "secret": false,
+      "ftc": false,
+      "relation": 0,
+      "openFavorite": false,
+      "commentSetting": 0,
+      "duetSetting": 0,
+      "stitchSetting": 0,
+      "privateAccount": false
+    },
+    "music": {
+      "id": "12",
+      "title": "Tiktoktan TAKİP EDİN BE",
+      "playUrl": "https://sf77-ies-music-sg.tiktokcdn.com/obj/tiktok-obj/7006878658355137282.mp3",
+      "coverThumb": "https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/44cda884a02f04033a74d6386a3e4889.jpeg?x-expires=1637092800&x-signature=OtWqfWcJ%2BtcS1FXylWYXNxWoQcw%3D",
+      "coverMedium": "https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/44cda884a02f04033a74d6386a3e4889.jpeg?x-expires=1637092800&x-signature=ID6H2rIbFxU%2FbLehXkqWqZ2DjFs%3D",
+      "coverLarge": "https://p16-sign-sg.tiktokcdn.com/aweme/1080x1080/tos-alisg-avt-0068/44cda884a02f04033a74d6386a3e4889.jpeg?x-expires=1637092800&x-signature=ZU%2FXm5y9JffrVefrAv3DwaRfa%2BM%3D",
+      "authorName": "MGT/Mayco",
+      "original": true,
+      "duration": 8,
+      "album": ""
+    },
+    "stats": {
+      "diggCount": 644000,
+      "shareCount": 4700,
+      "commentCount": 13600,
+      "playCount": 5400000
+    },
+    "duetInfo": {
+      "duetFromId": "0"
+    },
+    "originalItem": false,
+    "officalItem": false,
+    "secret": false,
+    "forFriend": false,
+    "digged": false,
+    "itemCommentStatus": 0,
+    "showNotPass": false,
+    "vl1": false,
+    "itemMute": false,
+    "effectStickers": [
+      {
+        "name": "Color Selector",
+        "ID": "459476"
+      }
+    ],
+    "authorStats": {
+      "followingCount": 89,
+      "followerCount": 24000000,
+      "heartCount": 627000000,
+      "videoCount": 827,
+      "diggCount": 6728,
+      "heart": 627000000
+    },
+    "privateItem": false,
+    "duetEnabled": true,
+    "stitchEnabled": true,
+    "shareEnabled": true,
+    "isAd": false,
+    "duetDisplay": 0,
+    "stitchDisplay": 0
+  }

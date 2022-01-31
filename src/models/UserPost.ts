@@ -3,5 +3,5 @@ export interface UserPost {
   cover: string;
   videoUrl: string;
   videoGif: string;
-  viewCount: number;
+  viewCount: number | undefined;
 }

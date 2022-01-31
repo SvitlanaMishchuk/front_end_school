@@ -7,10 +7,17 @@ import { UserPost } from '../models';
  */
 // Disabled due we don't know http response type
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const transformUserPost = (entity: any): UserPost => ({
-  id: entity.id,
-  cover: entity.video.cover,
-  videoUrl: entity.video.playAddr,
-  videoGif: entity.video.dynamicCover,
-  viewCount: entity.stats.playCount,
-});
+export const transformUserPost = (entity: any): UserPost | undefined => {
+  try {
+    return {
+      id: entity.id,
+      cover: entity.video.cover,
+      videoUrl: entity.video.playAddr,
+      videoGif: entity.video.dynamicCover,
+      viewCount: entity.stats.playCount || undefined,
+    };
+  } catch (error) {
+    console.error('Error in transformUserPost:', error);
+    throw error;
+  }
+};

@@ -1,21 +1,32 @@
 import { useQuery } from 'react-query';
 import { transformPost } from '../utils';
-import { apiRequest } from './apiRequest';
+import { apiService } from '../api-service/apiService';
+import { Post } from '../models';
 
 export const useGetTrendingFeed = (limit = 30) => {
   const key = `get_trending_feed_${limit}`;
-  const url = `/trending/feed?limit=${limit}`;
+
   const response = useQuery(
     key,
-    async () => {
-      const rawPosts = (await apiRequest(url)) as unknown as never[];
-      return rawPosts.map((element) => transformPost(element));
-    },
+    () => apiService.feedService.getTrendingFeeds(limit),
     { refetchOnWindowFocus: false },
   );
 
+
+  const posts: Post[] = [];
+  if (response.data && response.data.length) {
+    response.data.forEach((element: any) => {
+      try {
+        const transformedElem = transformPost(element);
+        if (transformedElem) {
+          posts.push(transformedElem);
+        }
+      } catch(error) {}
+    });
+  };
+
   return {
     ...response,
-    posts: response.data ?? [],
+    posts,
   };
 };
