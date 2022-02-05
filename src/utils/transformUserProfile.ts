@@ -18,10 +18,10 @@ export const transformUserProfile = (entity: any): UserProfile => {
       followersCount: entity.stats.followerCount,
       followingCount: entity.stats.followingCount,
       likesCount: entity.stats.heartCount,
-    }
+    };
   } catch (error) {
-    // console.log("In error");
-    console.error("Error in transformUserProfile:", error);
+    // eslint-disable-next-line no-console
+    console.error('Error in transformUserProfile:', error);
     throw error;
   }
 };

@@ -17,6 +17,7 @@ export const transformUserPost = (entity: any): UserPost | undefined => {
       viewCount: entity.stats.playCount || undefined,
     };
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Error in transformUserPost:', error);
     throw error;
   }

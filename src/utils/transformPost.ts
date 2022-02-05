@@ -22,9 +22,10 @@ export const transformPost = (entity: any): Post | undefined => {
       hashtags: entity.hashtags.map(({ id, name }: never) => ({ id, name })),
       likesCount: entity.diggCount,
       commentsCount: entity.commentCount,
-      }
+    };
   } catch (error) {
-    console.error("Error in transformPost:", error);
+    // eslint-disable-next-line no-console
+    console.error('Error in transformPost:', error);
     throw error;
   }
 };

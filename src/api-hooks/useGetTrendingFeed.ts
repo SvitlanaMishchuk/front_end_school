@@ -12,18 +12,19 @@ export const useGetTrendingFeed = (limit = 30) => {
     { refetchOnWindowFocus: false },
   );
 
-
   const posts: Post[] = [];
-  if (response.data && response.data.length) {
+  if (response.data && response.data.length > 0) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     response.data.forEach((element: any) => {
       try {
-        const transformedElem = transformPost(element);
-        if (transformedElem) {
-          posts.push(transformedElem);
+        const transformedElement = transformPost(element);
+        if (transformedElement) {
+          posts.push(transformedElement);
         }
-      } catch(error) {}
+        // eslint-disable-next-line no-empty
+      } catch (error) {}
     });
-  };
+  }
 
   return {
     ...response,

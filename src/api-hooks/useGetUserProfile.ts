@@ -5,20 +5,18 @@ import { apiService } from '../api-service/apiService';
 
 export const useGetUserProfile = (name: Author['name']) => {
   const key = `get_user_profile_${name}`;
-  const response = useQuery(
-    key,
-    () => apiService.userService.getUserProfile(name),
-  );
+  const response = useQuery(key, () => apiService.userService.getUserProfile(name));
 
   let userProfile: UserProfile | undefined;
   if (response.data) {
     try {
-      userProfile = transformUserProfile(response.data)
-    } catch (error) {
+      userProfile = transformUserProfile(response.data);
+    } catch (_) {
+      // eslint-disable-next-line no-alert
       alert('Something went wrong. Please, try again.');
     }
   }
-  
+
   return {
     ...response,
     data: response.data && userProfile,
